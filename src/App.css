@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--green);
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(175 175 175);
+}
+
+:root{
+    --marrom: #8D5734;
+    --pink: #FF94D6;
+    --pink: #90354b;
+    --salmon: #977876;
+    --musgo: #716437;
+    --creme: #F1CDA5;
+    --blue: #3EB8FF;
+    --purple: #544c55;
+    --green: #426f6f;
+    --green-2: #6c9191;
+    --white: #ffffff;
+    --gray: #bcb2ab;
+}
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body{
+    font-family: 'Open sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container{
+    position: relative;
+    display: block;
+    width: 95%;
+    max-width: 1208px;
+    margin: 0 auto;
+}
+
+#main{
+    min-height: 100vh;
+}
+
+#btnUp{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--white);
+    color: var(--marrom);
+    border: 1px solid var(--marrom);
+    text-align: center;
+    transform: translateX(200%);
+    transition: all, .4s ease-in-out;
+}
+
+#btnUp.active{
+    transform: translateX(0%);
+}

@@ -1,0 +1,109 @@
+
+#form{
+    background-color: var(--gray);
+    width: 100%;
+    height: auto;
+    padding: 150px 0;
+}
+
+.form-divisor{
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2em;
+    width: 100%;
+    height: auto;
+}
+
+.form-divisor .column{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2em;
+}
+
+.form-title{
+    text-align: center;
+    color: var(--white);
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+.form-divisor .column img{
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+
+.form-row{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row;
+    column-gap: 2em;
+}
+
+.form-label{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.form-label p{
+    width: 100%;
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--white);
+}
+
+.form-input{
+    width: 100%;
+    min-height: 30px;
+    border: 1px solid var(--white);
+    border-radius: 0.2em;
+    padding: 0.3em;
+    color: var(--musgo);
+    background-color: var(--white);
+    font-size: 1em;
+}
+
+.form-input::placeholder{
+    color: var(--musgo);
+}
+
+.form-input:focus{
+    outline: none;
+}
+
+.form-button{
+    margin-left: calc(100% - 200px);
+    width: 200px;
+    min-height: 30px;
+    border: 1px solid var(--white);
+    border-radius: 0.2em;
+    padding: 0.3em;
+    background: var(--white);
+    color: var(--purple);
+    font-size: 1em;
+    display: block;
+    cursor: pointer;
+}
+
+.form-button i.fa{
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 15px;
+    font-size: 0.6em;
+    border: 1px solid var(--purple);
+}
+
+.form-button:hover i.fa{
+    animation: fadeInLeft .4s 1 linear forwards;
+}

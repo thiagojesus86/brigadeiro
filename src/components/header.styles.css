@@ -1,0 +1,140 @@
+
+#header{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 999;
+    transition: all, .4s ease-in-out;
+}
+
+#header.fixed{
+    background-color: var(--green-2);
+    animation: fadeInDown .6s 1 ease-out forwards;
+}
+
+.header-nav{
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+.header-brand img{
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.toggle-menu{
+    display: none;
+}
+
+.header-nav a{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    height: auto;
+    padding: 0;
+    cursor: pointer;
+}
+
+.header-nav a:last-child{
+    text-align: right;
+}
+.header-nav a.active:after{
+    content "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+}
+
+.list-menu{
+    list-style-type: none;
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: right;
+}
+
+.list-item{
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.list-item a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.2em;
+    display: block;
+    position: relative;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    padding: 0 1em;
+    transition: all, .4s ease-in-out;
+}
+
+@media (max-width: 650px){
+    .list-menu{
+        display: none;
+    }
+    .list-menu.active{
+        display: block;
+        position: absolute;
+        top: 100%;
+        background-color: var(--green-2);
+        padding: 70px 0;
+        text-align: center;
+        animation: fadeIn .6s 1 ease-out forwards;
+    }
+    .list-menu.active:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: -15px;
+        right: 30px;
+        background: var(--green-2);
+        transform: rotate(45deg);
+    }
+    .list-menu.active .list-item{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .list-menu.active .list-item a{
+        text-align: center;
+        padding: 30px 0;
+    }
+    .toggle-menu{
+        display: block;
+        position: relative;
+        float: right;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid var(--green-2);
+        background-color: var(--white);
+        color: var(--green-2);
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+}
